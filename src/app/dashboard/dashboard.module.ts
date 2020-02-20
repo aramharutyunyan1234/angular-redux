@@ -5,8 +5,6 @@ import {FormsModule} from '@angular/forms';
 import {DashboardComponent} from "./dashboard.component";
 
 
-
-
 @NgModule({
   declarations: [
     DashboardComponent,

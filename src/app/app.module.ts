@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {UsersDummy} from "../general/dummyData/users-dummy";
 
 @NgModule({
   declarations: [
@@ -12,7 +13,9 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    UsersDummy
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

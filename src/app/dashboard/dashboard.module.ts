@@ -6,6 +6,7 @@ import {DashboardComponent} from "./dashboard.component";
 import {StoreModule} from "@ngrx/store";
 import {counterReducer} from "../store/reducers/counter.reducer";
 
+import * as fromScoreboard from '../store/reducers/scoreboard.reducer';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import {counterReducer} from "../store/reducers/counter.reducer";
     CommonModule,
     DashboardRoutingModule,
     FormsModule,
-    StoreModule.forRoot({ count: counterReducer })
+    StoreModule.forRoot({ count: counterReducer }),
+    StoreModule.forRoot({ game: fromScoreboard.reducer }),
+    StoreModule.forFeature(fromScoreboard.scoreboardFeatureKey, fromScoreboard.reducer)
   ]
 })
 export class DashboardModule { }
